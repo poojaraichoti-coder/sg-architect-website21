@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About the Creator — SG Architect</title>
+   <link rel="icon" type="image/x-icon" href="imges/architect/logo3.png">
+   <style>
+   .email-only {
+    font-size: 30px;
+    color: black;
+}
+
+.email-only:hover {
+    color: #ff9800;
+}
+/* ===== BACKGROUND VIDEO ===== */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* Remove white background */
+body,
+section,
+footer {
+  background: transparent !important;
+}
+
+/* Light overlay so text readable */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.4);
+  z-index: -1;
+}
+
+/* Navbar always visible */
+.navbar {
+  position: relative;
+  z-index: 10;
+}
+
+
+   </style>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- site CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Background Video -->
+<video autoplay muted loop playsinline id="bg-video">
+  <source src="vdo/vdo9.mp4" type="video/mp4">
+</video>
+
+
+
+<!-- Navbar (same style as other pages) -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html"><b style=color:orange;>Sushil Gupta Architect</b></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMain">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+       
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Creator Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-5 text-center">
+        <!-- Put creator photo in images/creator.jpg -->
+        <div class="creator-photo shadow rounded-circle overflow-hidden mx-auto">
+          <img src="imges/architect/mypic.jpg" alt="Creator - Sushil Gupta" class="w-100 h-100 object-cover">
+        </div>
+
+        <div class="mt-3">
+          <h5 class="mb-0">POOJA RAI</h5>
+          <p class="text-muted small">WEBSITE CREATOR</p>
+        </div>
+
+        <div class="mt-3">
+        
+          <a href="https://www.instagram.com/rai_shahb_2130?igsh=Mm9lMDU0bHp4dXF5" class="me-2 text-dark"><i class="fab fa-instagram fa-lg text-danger"></i></a>
+          <a href="https://www.linkedin.com/in/pooja-rai-201569323?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="ms-2 text-primary">
+  </a>
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+        <h2 class="fw-bold"><b>About </b><span style=color:orange;><u>the Creator</u> </span></h2>
+
+       <p> My name is <b>Pooja Rai,</b> and I am the designer and developer behind this website. </br>
+I create modern, responsive and user-friendly websites using HTML, CSS, Bootstrap and JavaScript.</br>
+
+This website was developed for Sushil Gupta Architect Company to help present their architectural services, completed projects and contact information in a professional digital format.
+</br>
+<b>My work includes:</b> <br>
+✔ Full-Stack web design<br>
+✔ Mobile-friendly layouts<br>
+✔ Clean & fast-loading pages<br>
+✔ Organized content planning<br>
+✔ User experience focused design<br>
+
+<b>I believe that every business deserves a website that communicates trust and professionalism — and I’m proud to create it.</b><p>
+        <ul class="list-unstyled">
+         
+          <li><strong>Location:</strong> 2/373, Vivek Khand, Gomti Nagar, Lucknow</li>
+        </ul>
+
+        <p class="mt-3">
+       <a href="mailto:info@poojaraichoti@gmail.com" class="email-only" title="poojaraichoti@gmail.com">
+  <i class="fa-solid fa-envelope"></i > 
+</a>  <b>Contact The Creator</b>
+
+        </p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-dark text-light text-center py-3">
+  <span style=color:orange; >2025 Sushil Gupta Architect Company||
+	<small> degined & developed By :<a href="about-creator.html">POOJA RAI</a></small></span>
+</footer>
+
+<!-- Bootstrap + Font Awesome JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

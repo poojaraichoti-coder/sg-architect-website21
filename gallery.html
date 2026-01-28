@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gallery - SG Architect</title>
+ <link rel="icon" type="image/x-icon" href="imges/architect/logo3.png">
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f7f7f7;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: transform .2s;
+    }
+
+    .gallery img:hover {
+        transform: scale(1.05);
+    }
+
+    /* Popup Modal Background */
+    .modal-custom {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.8);
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        padding: 20px;
+    }
+
+    /* Popup Content Box */
+    .modal-content-custom {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 450px;
+        width: 100%;
+    }
+
+    .modal-content-custom img {
+        width: 70%;
+        max-height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+        display: block;
+        margin: 0 auto;
+    }
+
+   #popupText {
+    margin-top: 15px;
+    font-size: 15px;
+    line-height: 1.5;
+    white-space: pre-line;
+    text-align: left;
+    color: white;
+}
+.modal-content-custom {
+    background: orange;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 550px;
+}
+
+
+    .close-btn {
+        margin-top: 15px;
+        padding: 8px 15px;
+        background: black;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+	.img-box {
+    position: relative;
+    cursor: pointer;
+}
+
+.img-box::after {
+    content: attr(data-hover);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;   /* 🔥 VERY IMPORTANT */
+}
+
+.img-box:hover::after {
+    opacity: 1;
+}
+/* Background Video */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;   /* sab content ke peeche */
+}
+
+/* Page content upar rahe */
+body {
+    position: relative;
+    z-index: 1;
+    background: transparent;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: -1;
+}
+
+
+
+</style>
+
+</head>
+<body>
+<!-- BACKGROUND VIDEO -->
+<video autoplay muted loop playsinline id="bg-video">
+    <source src="vdo/vdo2.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+</video>
+
+
+<!-- BACKGROUND VIDEO -->
+<video autoplay muted loop playsinline id="bg-video">
+  <source src="vdo/vdo8.mp4" type="video/mp4">
+</video>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">
+        <b style="color:orange;">Sushil Gupta Architect</b>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+    
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Gallery Section -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">
+        <b>Our <span style="color:orange;"><u>Team</u></span></b>
+    </h2>
+
+    <div class="gallery">
+
+        <!-- IMAGE 1 -->
+       <div class="img-box" 
+     data-hover="Website Designer & Developer">
+    <img src="imges/architect/mypic.jpg"
+         onclick="openPopup(this, `My name is XYZ........`)">
+</div>
+
+
+        <!-- IMAGE 2 -->
+       <div class="img-box" 
+     data-hover="AR. UMESH KUMAR ">
+    <img src="imges/architect/UMESH.jpg"
+         onclick="openPopup(this, `My name is UMESH KUMAR ........`)">
+</div>
+
+         <!-- IMAGE 3 -->
+       <div class="img-box" 
+     data-hover=" AR. VINOD KUMAR VERMA MARRIED ">
+    <img src="imges/architect/VINOD.jpg"
+         onclick="openPopup(this, `My name is VINOD KUMAR VERMA ........ married `)">
+</div>
+
+ <!-- IMAGE 4 -->
+       <div class="img-box" 
+     data-hover="Website Designer & Developer">
+    <img src="imges/architect/img3.jpg"
+         onclick="openPopup(this, `My name is  XYZ..........`)">
+</div>
+
+ <!-- IMAGE 5-->
+       <div class="img-box" 
+     data-hover="Website Designer & Developer">
+    <img src="imges/architect/img7.jpg"
+         onclick="openPopup(this, `My name is Pooja Rai...`)">
+</div>
+ <!-- IMAGE 6 -->
+       <div class="img-box" 
+     data-hover="Website Designer & Developer">
+    <img src="imges/architect/b2.jpg"
+         onclick="openPopup(this, `My name is  XYZ.........`)">
+</div>
+
+ <!-- IMAGE 7-->
+       <div class="img-box" 
+     data-hover="Website Designer & Developer" >
+    <img src="imges/architect/a5.jpg"
+         onclick="openPopup(this, `My name is  XYZ..........`)">
+</div>
+
+ <!-- IMAGE 8 -->
+       <div class="img-box" 
+     data-hover="Website Designer & Developer">
+    <img src="imges/architect/a4.jpg"
+         onclick="openPopup(this, `My name is  XYZ..........`)">
+</div>
+
+ <!-- IMAGE 9 -->
+       <div class="img-box" 
+     data-hover="Website Designer & Developer">
+    <img src="imges/architect/a3.jpg"
+         onclick="openPopup(this, `My name is  XYZ..........`)">
+</div>
+
+ <!-- IMAGE 10 -->
+       <div class="img-box" 
+     data-hover="Website Designer & Developer">
+    <img src="imges/architect/a1.jpg"
+         onclick="openPopup(this, `My name is  XYZ..........`)">
+</div>
+
+  </div>
+</section>
+
+<!-- Custom Popup Modal -->
+<div class="modal-custom" id="popupModal">
+    <div class="modal-content-custom">
+
+        <img id="popupImage" src="">
+        <p id="popupText"></p>
+
+        <div class="text-center">
+            <button class="close-btn" onclick="closePopup()">Close</button>
+        </div>
+    </div>
+</div>
+
+<footer class="bg-dark text-light text-center py-3">
+  <span style=color:orange; >2025 Sushil Gupta Architect Company||
+	<small> degined & developed By :<a href="about-creator.html">POOJA RAI</a></small></span>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+function openPopup(image, text) {
+    document.getElementById("popupImage").src = image.src;
+    document.getElementById("popupText").textContent = text;
+    document.getElementById("popupModal").style.display = "flex";
+}
+
+function closePopup() {
+    document.getElementById("popupModal").style.display = "none";
+}
+</script>
+
+</body>
+</html>

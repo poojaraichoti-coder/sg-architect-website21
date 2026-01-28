@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Us - SG Architect</title>
+
+  <link rel="icon" type="image/x-icon" href="imges/architect/logo3.png">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<!-- BACKGROUND VIDEO -->
+<video autoplay muted loop playsinline id="bg-video">
+  <source src="vdo/vdo7.mp4" type="video/mp4">
+</video>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html"><b style=color:orange;>Sushil Gupta Architect</b></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+		 <li class="nav-item active"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+		
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Fixed Founder Section -->
+<div class="fixed-team">
+
+  <div class="team-box">
+    <div class="circle-img" data-text="Founder & Urban Design Specialist">
+      <img src="imges/architect/b3.jpg" alt="Founder">
+    </div>
+  <button class="team-btn" onclick="openFounderModal()">About Founder</button>
+
+  </div>
+
+  <div class="team-box">
+    <div class="circle-img" data-text="HR Manager">
+      <img src="imges/architect/b3.jpg" alt="Director">
+    </div>
+   <button class="team-btn" onclick="openHRModal()">About HR</button>
+  </div>
+
+</div>
+
+
+<!-- About Section -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-4"><b>About<span style=color:orange;><u> Us</u></span></b></h2>
+
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <p class="lead">
+         <b style=color:orange;> **Sushil Gupta Architect** </b>is a professional architectural firm
+          located at <b>2/373, Vivek Khand, Gomti Nagar, Lucknow</b>.
+        </p>
+       <p style=color:white;>Sushil Gupta Architect is a professional architecture and design studio based in Vivek Khand, Gomti Nagar, Lucknow.
+We specialize in delivering creative, functional and modern architectural solutions for residential, commercial and interior projects.
+
+Our focus is simple — to provide smart planning, elegant designs and high-quality project execution.
+From house maps to complete architectural planning and elevation design, we offer end-to-end architectural services tailored to each client’s needs.
+
+With a commitment to innovation, accuracy and client satisfaction, we ensure every project is designed with attention to detail and delivered with professionalism.
+At Sushil Gupta Architect Company, we believe in creating spaces that are beautiful, practical and built to enhance everyday living.</p>
+      </div>
+
+      <div class="col-md-6 img-blur-wrap">
+  <img src="imges/architect/logo3.png" class="img-fluid rounded shadow zoom-img" alt="Architect Image">
+</div>
+
+    </div>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+	  <h2 class="text-center fw-bold mb-4"><b>Our<span style=color:orange;> <u>Project Gallery</u></span></b></h2>
+
+    <div class="row g-4">
+
+      <!-- Image 1 -->
+      <div class="col-md-4">
+        <figure class="gallery-item">
+          <img src="imges/architect/img1.jpg" class="gallery-thumb" alt="Architect design 1">
+          <figcaption class="overlay">
+            <div class="overlay-text">
+              <h5>Exterior View</h5>
+              <p>Premium residence design</p>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+
+      <!-- Image 2 -->
+      <div class="col-md-4">
+        <figure class="gallery-item">
+          <img src="imges/architect/img2.jpg" class="gallery-thumb" alt="Architect design 2">
+          <figcaption class="overlay">
+            <div class="overlay-text">
+              <h5>3D Elevation</h5>
+              <p>Realistic modern concept</p>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+
+      <!-- Image 3 -->
+      <div class="col-md-4">
+        <figure class="gallery-item">
+          <img src="imges/architect/b3.jpg" class="gallery-thumb" alt="Architect design 3">
+          <figcaption class="overlay">
+            <div class="overlay-text">
+              <h5>Luxury Villa</h5>
+              <p>Elegant entrance design</p>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+
+      <!-- Image 4 -->
+      <div class="col-md-4">
+        <figure class="gallery-item">
+          <img src="imges/architect/img3.jpg" class="gallery-thumb" alt="Architect design 4">
+          <figcaption class="overlay">
+            <div class="overlay-text">
+              <h5>Classic Architecture</h5>
+              <p>Wide balcony & wooden theme</p>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+
+      <!-- Image 5 -->
+      <div class="col-md-4">
+        <figure class="gallery-item">
+          <img src="imges/architect/img4.jpg" class="gallery-thumb" alt="Architect design 5">
+          <figcaption class="overlay">
+            <div class="overlay-text">
+              <h5>Interior Concept</h5>
+              <p>Modern living room</p>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+
+      <!-- Image 6 -->
+      <div class="col-md-4">
+        <figure class="gallery-item">
+          <img src="imges/architect/img5.jpg" class="gallery-thumb" alt="Architect design 6">
+          <figcaption class="overlay">
+            <div class="overlay-text">
+              <h5>Exterior View</h5>
+              <p>Premium residence design</p>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- Founder Modal -->
+<div class="founder-modal" id="founderModal">
+  <div class="founder-content" onclick="event.stopPropagation()">
+
+    <h3><u style=color:orange;>Founder, Sushil Gupta Architect
+Master’s Scholar in Urban Design | Design Visionary</u></h3>
+
+   <p> The founder of Sushil Gupta Architect is a forward-thinking design professional with a strong academic foundation in Urban Design, having successfully completed his Master’s degree in Urban Design. With years of hands-on professional experience, he brings a refined blend of creativity, strategic thinking, and technical excellence to every project he undertakes.
+
+Founded in 2016, Sushil Gupta Architect was established with a clear vision to deliver timeless architectural solutions that seamlessly balance aesthetics, functionality, and environmental responsibility. Since its inception, the firm has remained dedicated to redefining urban spaces through innovative concepts, precision-driven planning, and a client-centric approach.
+
+Under his leadership, the practice emphasizes thoughtful design, meticulous attention to detail, and a deep understanding of human-centered environments. His design philosophy is rooted in the belief that architecture should not only inspire visually but also enhance the way people live, work, and interact with their surroundings.
+
+With a strong focus on quality, integrity, and innovation, he continues to guide the firm toward creating meaningful, sustainable, and future-ready spaces.
+</p>
+
+    <div class="text-center mt-4">
+      <button class="modal-close-btn" onclick="closeFounderModal()">Close</button>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="founder-modal" id="hrModal">
+  <div class="founder-content" onclick="event.stopPropagation()">
+
+    <h3><u style=color:orange;>About HR Manager</u></h3>
+
+    <p>
+      <b>HR Manager</b> at <b>Sushil Gupta Architect Company</b> is responsible
+      for recruitment, employee management and office coordination.<br><br>
+
+      The HR department ensures smooth communication, staff welfare and
+      maintains professional work culture within the organization.
+    </p>
+
+    <div class="text-center mt-4">
+      <button class="modal-close-btn" onclick="closeHRModal()">Close</button>
+    </div>
+
+  </div>
+</div>
+
+
+
+<footer class="bg-dark text-light text-center py-3">
+  <span style=color:orange; >2025 Sushil Gupta Architect Company||
+	<small> degined & developed By :<a href="about-creator.html">POOJA RAI</a></small></span>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+<script>
+function openFounderModal() {
+  document.getElementById("founderModal").style.display = "flex";
+}
+
+function closeFounderModal() {
+  document.getElementById("founderModal").style.display = "none";
+}
+
+function openHRModal() {
+  document.getElementById("hrModal").style.display = "flex";
+}
+
+function closeHRModal() {
+  document.getElementById("hrModal").style.display = "none";
+}
+</script>
+
+
+</html>

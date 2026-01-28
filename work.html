@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Work— SG Architects</title>
+ <link rel="icon" type="image/x-icon" href="imges/architect/logo3.png">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+
+<style>
+    body {
+        background: #f7f7f7;
+        padding: 40px;
+        font-family: Arial, sans-serif;
+    }
+
+    .custom-card {
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .custom-card img {
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .custom-card:hover {
+        transform: scale(1.08);
+        border-color: orange;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+	.zoom-img {
+    height: 80vh;
+    object-fit: contain;
+    cursor: zoom-in;
+    transition: transform 0.4s ease;
+}
+
+.zoom-img:hover {
+    transform: scale(1.15);
+}
+
+</style>
+</head>
+
+<body>
+<video autoplay muted loop playsinline id="bg-video">
+  <source src="vdo/vdo2.mp4" type="video/mp4">
+</video>
+
+<!-- Navbar (same style as other pages) -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html"><b style=color:orange;>Sushil Gupta Architect</b></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMain">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+    <h2 class="text-center fw-bold mb-5 mt-5">
+        Our <span style="color:orange;"><u>Work</u></span>
+    </h2>
+
+    <div class="row g-4">
+
+        <!-- Card 1 -->
+  <div class="col-md-4">
+    <div class="card custom-card" data-bs-toggle="modal" data-bs-target="#galleryArch">
+      <img src="imges/architect/b3.jpg" class="card-img-top">
+      <div class="card-body text-center">
+        <h5>Architectural Design</h5>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="col-md-4">
+    <div class="card custom-card" data-bs-toggle="modal" data-bs-target="#galleryUrban">
+      <img src="imges/architect/b3.jpg" class="card-img-top">
+      <div class="card-body text-center">
+        <h5>Urban Designing</h5>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="col-md-4">
+    <div class="card custom-card" data-bs-toggle="modal" data-bs-target="#galleryInterior">
+      <img src="imges/architect/b3.jpg" class="card-img-top">
+      <div class="card-body text-center">
+        <h5>Interior Design</h5>
+      </div>
+    </div>
+  </div>
+
+
+    </div>
+</div>
+
+
+<footer class="bg-dark text-light text-center py-3 mt-5">
+  <span style=color:orange; >2025 Sushil Gupta Architect Company||
+	<small> degined & developed By :<a href="about-creator.html">POOJA RAI</a></small></span>
+</footer>
+
+<div class="modal fade" id="galleryArch">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content bg-dark">
+
+      <div class="modal-header border-0">
+        <h5 class="text-white">Architectural Gallery</h5>
+        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body p-0">
+        <div id="archCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+
+            <div class="carousel-item active">
+              <img src="imges/architect/b1.jpg" class="d-block w-100 zoom-img">
+            </div>
+
+            <div class="carousel-item">
+              <img src="imges/architect/b2.jpg" class="d-block w-100 zoom-img">
+            </div>
+
+            <div class="carousel-item">
+              <img src="imges/architect/b3.jpg" class="d-block w-100 zoom-img">
+            </div>
+
+          </div>
+
+          <button class="carousel-control-prev" data-bs-target="#archCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+
+          <button class="carousel-control-next" data-bs-target="#archCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="galleryUrban">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content bg-dark">
+      <div class="modal-header border-0">
+        <h5 class="text-white">Urban Design Gallery</h5>
+        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body p-0">
+        <div id="urbanCarousel" class="carousel slide">
+          <div class="carousel-inner">
+
+            <div class="carousel-item active">
+              <img src="imges/urban/u1.jpg" class="d-block w-100 zoom-img">
+            </div>
+
+            <div class="carousel-item">
+              <img src="imges/urban/u2.jpg" class="d-block w-100 zoom-img">
+            </div>
+
+          </div>
+
+          <button class="carousel-control-prev" data-bs-target="#urbanCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+
+          <button class="carousel-control-next" data-bs-target="#urbanCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="galleryInterior">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content bg-dark">
+      <div class="modal-header border-0">
+        <h5 class="text-white">Interior Design Gallery</h5>
+        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body p-0">
+        <div id="interiorCarousel" class="carousel slide">
+          <div class="carousel-inner">
+
+            <div class="carousel-item active">
+              <img src="imges/interior/i1.jpg" class="d-block w-100 zoom-img">
+            </div>
+
+            <div class="carousel-item">
+              <img src="imges/interior/i2.jpg" class="d-block w-100 zoom-img">
+            </div>
+
+          </div>
+
+          <button class="carousel-control-prev" data-bs-target="#interiorCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+
+          <button class="carousel-control-next" data-bs-target="#interiorCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>

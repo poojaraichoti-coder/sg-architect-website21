@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — SG Architects</title>
+ <link rel="icon" type="image/x-icon" href="imges/architect/logo3.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- BACKGROUND VIDEO -->
+<video autoplay muted loop playsinline id="bg-video">
+  <source src="vdo/vdo1.mp4" type="video/mp4">
+</video>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="index.html"><b style="color:orange;">Sushil Gupta Architect</b></a>
+  <img src="imges/architect/favicon2.png" alt="Logo" style="height: 30px; width: 30px;">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMenu">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navMenu">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+      <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+      <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="py-5">
+  <div class="container">
+    <h2 class="mb-4 text-center"><b>Contact <span style="color:orange;"><u>Us</u></span></b></h2>
+    <div class="row">
+      <div class="col-md-6">
+        <!-- Contact form -->
+        <form id="contactForm" autocomplete="off">
+          <div class="form-group">
+              <label style=color:orange;>Name</label>
+              <input id="name" type="text" class="form-control" placeholder="Enter Your Name" autocomplete="off" required>
+              <small id="nameError" class="text-danger"></small>
+          </div>
+          <div class="form-group">
+              <label style=color:orange;>Email</label>
+              <input id="email" type="email" class="form-control" placeholder="Enter Your Email" autocomplete="off" required>
+              <small id="emailError" class="text-danger"></small>
+          </div>
+          <div class="form-group">
+              <label style=color:orange;>Phone</label>
+              <input id="phone" type="number" class="form-control" placeholder="Enter Your Mobile No." autocomplete="off">
+              <small id="phoneError" class="text-danger"></small>
+          </div>
+          <div class="form-group">
+              <label style=color:orange;>Message</label>
+              <textarea id="message" class="form-control" rows="5" placeholder="Enter Your Message............" autocomplete="off" required></textarea>
+              <small id="messageError" class="text-danger"></small>
+          </div>
+          <button class="btn btn-warning" type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <div class="col-md-6">
+        <h5><b>Office</b></h5>
+        <p>2/373, Vivek Khand, Gomti Nagar, Lucknow</p>
+        <p><i class="fas fa-phone"></i> 9xxxxxxxxx<br><i class="fas fa-envelope"></i> yourmail@gmail.com</p>
+        <h6 class="mt-4"><b style=color:orange;>Find us here</b></h6>
+        <div class="map-responsive mb-3">
+          <iframe src="https://www.google.com/maps?q=2%2F373%20Vivek%20Khand%20Gomti%20Nagar%20Lucknow&output=embed"
+            width="100%" height="300" frameborder="0" style="border:3;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+        <p class="small text-muted">Working Hours: Mon–Sat 10:00–08:00</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-dark text-white text-center p-3">
+  <div class="container">
+    <div class="mb-2">
+      <a href="#" class="text-white mr-3"><i class="fab fa-facebook fa-lg text-primary"></i></a>
+      <a href="#" class="text-white mr-3"><i class="fab fa-instagram fa-lg text-danger"></i></a>
+      <a href="https://wa.me/91xxxxxxxxxx" class="text-white mr-3"><i class="fab fa-whatsapp fa-lg text-success"></i></a>
+    </div>
+    <small style=color:orange;>2025 Sushil Gupta Architect Company ||</small>
+	<small style=color:orange;> degined & developed By :<a href="about-creator.html">POOJA RAI</a></small>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+  
+  <script src="js/script.js"></script>
+  <!-- Popup -->
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <p style="color:green;">We Will Contact You Soon!</p>
+  </div>
+</div>
+
+</body>
+</html>

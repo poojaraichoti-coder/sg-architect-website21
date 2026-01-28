@@ -1,0 +1,544 @@
+
+/* Modal image styling to match gallery theme */
+.modal-img-wrap {
+  background: #f8f9fa;
+  max-height: 65vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-img-wrap img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform .35s ease;
+}
+
+/* optional slight zoom on modal image hover */
+.modal-img-wrap img:hover {
+  transform: scale(1.02);
+}
+
+/* Modal text styling */
+#modalTitle {
+  font-size: 1.125rem;
+}
+#modalDesc {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Small screens: modal full height image */
+@media (max-width: 576px) {
+  .modal-img-wrap { max-height: 50vh; }
+}
+/* Basic styles */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Carousel image height */
+.carousel-img {
+  height: 400px;
+  object-fit: cover;
+}
+
+/* gallery thumbs */
+.gallery-thumb {
+  height: 220px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+/* responsive map */
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+/* slight spacing for testimonials */
+.blockquote {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+/* Footer icons spacing */
+footer a { text-decoration: none; }
+
+/* Gallery hover effect */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  transition: transform .35s ease;
+}
+
+/* Thumbnail image */
+.gallery-thumb {
+  display: block;
+  width: 100%;
+  height: 220px;         /* change as needed */
+  object-fit: cover;
+  transition: transform .45s ease, filter .35s ease, box-shadow .35s ease;
+}
+
+/* Overlay (hidden by default) */
+.gallery-item .overlay {
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px;
+  background: rgba(0,0,0,0.28);
+  color: #fff;
+  opacity: 0;
+  transition: opacity .28s ease, background .28s ease;
+  pointer-events: none; /* so clicks go to image unless you want otherwise */
+}
+
+/* Text inside overlay */
+.gallery-item .overlay .overlay-text h5 {
+  margin: 0 0 6px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.gallery-item .overlay .overlay-text p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: .95;
+}
+
+/* Hover / focus effect */
+.gallery-item:hover .gallery-thumb,
+.gallery-item.hover .gallery-thumb {
+  transform: scale(1.08);
+  filter: brightness(.82);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+}
+
+.gallery-item:hover .overlay,
+.gallery-item.hover .overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Small accessibility: show overlay on keyboard focus */
+.gallery-item:focus-within .overlay {
+  opacity: 1;
+}
+
+/* Responsive tweak: smaller height on small screens */
+@media (max-width: 576px) {
+  .gallery-thumb { height: 160px; }
+}
+
+/* ----- Creator page styles ----- */
+
+/* circular photo container with fixed size and cover */
+.creator-photo {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  display: inline-block;
+}
+
+/* ensure img covers the circle */
+.creator-photo img.object-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s ease, filter .35s ease;
+}
+
+/* subtle hover zoom on photo */
+.creator-photo:hover img.object-cover {
+  transform: scale(1.06);
+  filter: saturate(1.03) contrast(1.02);
+}
+
+/* heading/link spacing for this page */
+section h2 { margin-bottom: 0.6rem; }
+section p.lead { color: #5b6066; }
+
+/* responsive tweak */
+@media (max-width: 576px) {
+  .creator-photo { width: 160px; height: 160px; }
+}
+
+<nav class="navbar">
+  <span>Sushil Gupta Architect</span>
+  <img src="favicon.ico" alt="Logo">
+</nav>
+
+<style>
+  .navbar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .navbar img {
+    height: 30px;
+    width: 30px;
+  }
+  
+  /* Fixed Team Section */
+.fixed-team {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    z-index: 1000;
+    padding: 20px 0;
+}
+
+
+/* Team Box */
+.team-box {
+    text-align: center;
+}
+
+/* Circular Image */
+.circle-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    margin: auto;
+}
+
+.circle-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hover Text */
+.circle-img::after {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 13px;
+    opacity: 0;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.circle-img:hover::after {
+    opacity: 1;
+}
+
+/* Button */
+.team-btn {
+    margin-top: 10px;
+    padding: 6px 16px;
+    border: none;
+    border-radius: 20px;
+    background: orange;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.team-btn:hover {
+    background: black;
+    transform: scale(1.05);
+}
+
+/* Modal */
+.founder-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.founder-content {
+    background: white;
+    padding: 30px;
+    max-width: 600px;
+    border-radius: 12px;
+    animation: zoomIn 0.4s ease;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.close-founder {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 26px;
+    cursor: pointer;
+}
+.modal-close-btn {
+    padding: 8px 22px;
+    background: orange;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.modal-close-btn:hover {
+    background: black;
+    transform: scale(1.05);
+}
+
+/* ===== Services Card Hover Effect ===== */
+
+.card {
+  border: 1px solid transparent;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* Orange line animation */
+.card::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background: orange;
+  transition: width 0.4s ease;
+}
+
+/* Hover effect */
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border-color: orange;
+}
+
+/* Orange line full on hover */
+.card:hover::before {
+  width: 100%;
+}
+
+/* Title color change */
+.card:hover h4 {
+  color: orange;
+}
+
+/* Smooth text */
+.card h4 {
+  transition: color 0.3s ease;
+}
+
+/* Card body spacing improve */
+.card-body {
+  padding: 30px;
+}
+/* Input, textarea focus par orange border */
+.form-control:focus {
+    border-color: orange;
+    box-shadow: 0 0 0 0.2rem rgba(255, 165, 0, 0.25);
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 22px 30px;
+  border-radius: 10px;
+  font-size: 16px;
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: fadeSlideIn 0.5s forwards;
+}
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlideOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+}
+/* wrapper */
+.img-blur-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+/* image zoom */
+.zoom-img {
+  transition: transform 0.6s ease;
+}
+
+/* hover par image zoom */
+.img-blur-wrap:hover .zoom-img {
+  transform: scale(1.15);
+}
+
+/* background blur effect */
+.img-blur-wrap::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+}
+
+/* hover par blur show */
+.img-blur-wrap:hover::after {
+  opacity: 1;
+}
+
+/* image ko blur se upar rakhne ke liye */
+.img-blur-wrap img{
+  position: relative;
+  z-index: 2;
+}
+
+
+
+/* ===== FULL BACKGROUND VIDEO ===== */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: blur(6px) brightness(0.85);
+
+}
+
+/* Remove white background everywhere */
+body,
+section,
+footer,
+.bg-light {
+  background: transparent !important;
+}
+
+/* Navbar upar rahe */
+.navbar {
+  position: relative;
+  z-index: 10;
+}
+
+/* Text readable rahe */
+section, footer {
+  color: #000;
+}
+#bg-video {
+  filter: brightness(0.9);
+  will-change: transform;
+}
+/* ===== CONTACT FORM INPUT STYLE ===== */
+form input,
+form textarea {
+  background: transparent !important;
+  border: 2px solid orange;
+  color: #000;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Placeholder visible rahe */
+form input::placeholder,
+form textarea::placeholder {
+  color: #333;
+  opacity: 1;
+}
+
+/* Hover par light orange background */
+form input:hover,
+form textarea:hover {
+  background: rgba(255, 165, 0, 0.2); /* light orange */
+}
+
+/* Focus (jab user type kare) */
+form input:focus,
+form textarea:focus {
+  background: rgba(255, 165, 0, 0.25);
+  outline: none;
+  box-shadow: 0 0 8px rgba(255,165,0,0.6);
+  border-color: orange;
+}
+
+/* Submit button (optional matching style) */
+form button,
+form input[type="submit"] {
+  background: orange;
+  border: none;
+  color: #fff;
+  padding: 10px 25px;
+  transition: 0.3s;
+}
+
+form button:hover,
+form input[type="submit"]:hover {
+  background: darkorange;
+}
+
+
+</style>
+
